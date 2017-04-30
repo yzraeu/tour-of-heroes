@@ -1,22 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
-    selector: 'my-app',
-    //templateUrl: 'app.component.html'
-    template: `
-    <h1>{{title}}</h1>
-
-    <my-heroes></my-heroes>
-    `,
+	moduleId: module.id,
+	selector: 'my-app',
+	//templateUrl: 'app.component.html'
+	styleUrls: ['./app.component.css'],
+	template: `
+	<h1>{{title}}</h1>
+	<nav>
+		<a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+		<a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+	</nav>
+	<router-outlet></router-outlet>
+	`,
 })
 export class AppComponent implements OnInit {
-    title = 'Tour of Heroes';
+	title = 'Tour of Heroes';
 
-    constructor() { }
+	constructor() { }
 
-    ngOnInit() { 
+	ngOnInit() { 
 
-    }
+	}
 
 }

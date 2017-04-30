@@ -22,7 +22,8 @@ AppComponent = __decorate([
         moduleId: module.id,
         selector: 'my-app',
         //templateUrl: 'app.component.html'
-        template: "\n    <h1>{{title}}</h1>\n\n    <my-heroes></my-heroes>\n    ",
+        styleUrls: ['./app.component.css'],
+        template: "\n\t<h1>{{title}}</h1>\n\t<nav>\n\t\t<a routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</a>\n\t\t<a routerLink=\"/heroes\" routerLinkActive=\"active\">Heroes</a>\n\t</nav>\n\t<router-outlet></router-outlet>\n\t",
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);
